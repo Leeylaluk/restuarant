@@ -81,8 +81,8 @@ export default function RegisterModal({ isOpen, onClose, onSwitchToLogin }) {
           <fieldset className="modal-body">
             <legend className="modal-title">Регистрация</legend>
             
-            {error && <div className="auth-error" style={{ color: 'red', marginBottom: '10px' }}>{error}</div>}
-            {success && <div className="auth-success" style={{ color: 'green', marginBottom: '10px' }}>{success}</div>}
+            {error && <div className="auth-error">{error}</div>}
+            {success && <div className="auth-success">{success}</div>}
             
             <label className="label-auth">
               <span>Логин <span style={{ color: 'red' }}>*</span></span>
@@ -103,6 +103,7 @@ export default function RegisterModal({ isOpen, onClose, onSwitchToLogin }) {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
+                placeholder="Введите пароль"
                 required
               />
             </label>
@@ -137,6 +138,7 @@ export default function RegisterModal({ isOpen, onClose, onSwitchToLogin }) {
                 type="email"
                 name="email"
                 value={formData.email}
+                placeholder="Введите email"
                 onChange={handleChange}
               />
             </label>
@@ -147,6 +149,7 @@ export default function RegisterModal({ isOpen, onClose, onSwitchToLogin }) {
                 type="tel"
                 name="phone"
                 value={formData.phone}
+                placeholder="Введите телефон"
                 onChange={handleChange}
               />
             </label>
